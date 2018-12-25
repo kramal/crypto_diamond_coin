@@ -1,4 +1,4 @@
-const MINE_RATE = 1000;
+const MINE_RATE = 10;
 
 const INITIAL_DIFFICULTY = 3;
 
