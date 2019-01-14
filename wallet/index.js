@@ -15,9 +15,9 @@ class Wallet {
     return this.keyPair.sign(cryptoHash(data));
   }
 
-  createTransaction({ recipient, amount }) {
+  createTransaction({ amount, recipient }) {
     if (amount > this.balance) {
-      throw new Error('Amount exceeds balance');
+      throw new Error('Amount exceeds balance' + amount + ' > ' + this.balance);
     }
 
     return new Transaction({ senderWallet: this, recipient, amount });
