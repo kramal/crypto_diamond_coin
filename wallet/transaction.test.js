@@ -1,7 +1,7 @@
 const Transaction = require('./transaction');
 const Wallet = require('./index');
-const { REWARD_INPUT, MINING_REWARD } = require('../config');
 const { verifySignature } = require('../util');
+const { REWARD_INPUT, MINING_REWARD } = require('../config');
 
 describe('Transaction', () => {
   let transaction, senderWallet, recipient, amount;
@@ -175,7 +175,7 @@ describe('Transaction', () => {
     });
   });
 
-  describe('rewardTransaction', () => {
+  describe('rewardTransaction()', () => {
     let rewardTransaction, minerWallet;
 
     beforeEach(() => {
